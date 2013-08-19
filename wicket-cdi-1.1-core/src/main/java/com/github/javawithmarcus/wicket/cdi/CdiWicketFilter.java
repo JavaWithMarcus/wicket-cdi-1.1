@@ -31,12 +31,7 @@ public class CdiWicketFilter extends WicketFilter
 {
 
 	@Inject
-	CdiWebApplicationFactory applicationFactory;
-
-	public CdiWicketFilter()
-	{
-	}
-
+	private CdiWebApplicationFactory applicationFactory;
 
 	@Override
 	protected IWebApplicationFactory getApplicationFactory()

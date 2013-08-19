@@ -19,142 +19,119 @@ package com.github.javawithmarcus.wicket.cdi;
 import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
-
 import org.apache.wicket.application.IComponentOnBeforeRenderListener;
 import org.apache.wicket.request.cycle.IRequestCycleListener;
 
 /**
- * Simple POJO bean for storing the initial configuration parameters as well as
- * the state of the dynamic variables used by {@link CdiConfiguration}.
- *
+ * Simple POJO bean for storing the initial configuration parameters as well as the state of the dynamic variables used
+ * by {@link CdiConfiguration}.
+ * 
  * @author jsarman
  */
-public class ConfigurationParameters implements Serializable
-{
+public class ConfigurationParameters implements Serializable {
 
-	private IConversationPropagation propagation = ConversationPropagation.NONBOOKMARKABLE;
-	private boolean injectComponents = true;
-	private boolean injectApplication = true;
-	private boolean injectSession = true;
-	private boolean injectBehaviors = true;
-	private boolean autoConversationManagement = false;
-	private boolean configured = false;
+    private static final long serialVersionUID = 1L;
 
-	private Set<String> ignoredPackages = new TreeSet<>();
-	private IRequestCycleListener activeRequestCycleListener;
-	private IComponentOnBeforeRenderListener activeComponentOnBeforeRenderListener;
+    private IConversationPropagation propagation = ConversationPropagation.NONBOOKMARKABLE;
+    private boolean injectComponents = true;
+    private boolean injectApplication = true;
+    private boolean injectSession = true;
+    private boolean injectBehaviors = true;
+    private boolean autoConversationManagement = false;
+    private boolean configured = false;
 
-	public ConfigurationParameters()
-	{
+    private Set<String> ignoredPackages = new TreeSet<>();
+    private IRequestCycleListener activeRequestCycleListener;
+    private IComponentOnBeforeRenderListener activeComponentOnBeforeRenderListener;
 
-	}
+    public ConfigurationParameters() {
 
+    }
 
-	public IConversationPropagation getPropagation()
-	{
-		return propagation;
-	}
+    public IConversationPropagation getPropagation() {
+        return propagation;
+    }
 
-	ConfigurationParameters setPropagation(IConversationPropagation propagation)
-	{
-		this.propagation = propagation;
-		return this;
-	}
+    ConfigurationParameters setPropagation(IConversationPropagation propagation) {
+        this.propagation = propagation;
+        return this;
+    }
 
+    public boolean isInjectComponents() {
+        return injectComponents;
+    }
 
-	public boolean isInjectComponents()
-	{
-		return injectComponents;
-	}
+    ConfigurationParameters setInjectComponents(boolean injectComponents) {
+        this.injectComponents = injectComponents;
+        return this;
+    }
 
-	ConfigurationParameters setInjectComponents(boolean injectComponents)
-	{
-		this.injectComponents = injectComponents;
-		return this;
-	}
+    public boolean isInjectApplication() {
+        return injectApplication;
+    }
 
-	public boolean isInjectApplication()
-	{
-		return injectApplication;
-	}
+    ConfigurationParameters setInjectApplication(boolean injectApplication) {
+        this.injectApplication = injectApplication;
+        return this;
+    }
 
-	ConfigurationParameters setInjectApplication(boolean injectApplication)
-	{
-		this.injectApplication = injectApplication;
-		return this;
-	}
+    public boolean isInjectSession() {
+        return injectSession;
+    }
 
-	public boolean isInjectSession()
-	{
-		return injectSession;
-	}
+    ConfigurationParameters setInjectSession(boolean injectSession) {
+        this.injectSession = injectSession;
+        return this;
+    }
 
-	ConfigurationParameters setInjectSession(boolean injectSession)
-	{
-		this.injectSession = injectSession;
-		return this;
-	}
+    public boolean isInjectBehaviors() {
+        return injectBehaviors;
+    }
 
-	public boolean isInjectBehaviors()
-	{
-		return injectBehaviors;
-	}
+    ConfigurationParameters setInjectBehaviors(boolean injectBehaviors) {
+        this.injectBehaviors = injectBehaviors;
+        return this;
+    }
 
-	ConfigurationParameters setInjectBehaviors(boolean injectBehaviors)
-	{
-		this.injectBehaviors = injectBehaviors;
-		return this;
-	}
+    public boolean isAutoConversationManagement() {
+        return autoConversationManagement;
+    }
 
-	public boolean isAutoConversationManagement()
-	{
-		return autoConversationManagement;
-	}
+    ConfigurationParameters setAutoConversationManagement(boolean autoConversationManagement) {
+        this.autoConversationManagement = autoConversationManagement;
+        return this;
+    }
 
-	ConfigurationParameters setAutoConversationManagement(boolean autoConversationManagement)
-	{
-		this.autoConversationManagement = autoConversationManagement;
-		return this;
-	}
+    public Set<String> getIgnoredPackages() {
+        return ignoredPackages;
+    }
 
-	public Set<String> getIgnoredPackages()
-	{
-		return ignoredPackages;
-	}
+    void setIgnoredPackages(Set<String> ignoredPackages) {
+        this.ignoredPackages = ignoredPackages;
+    }
 
-	void setIgnoredPackages(Set<String> ignoredPackages)
-	{
-		this.ignoredPackages = ignoredPackages;
-	}
+    IRequestCycleListener getActiveRequestCycleListener() {
+        return activeRequestCycleListener;
+    }
 
-	IRequestCycleListener getActiveRequestCycleListener()
-	{
-		return activeRequestCycleListener;
-	}
+    void setActiveRequestCycleListener(IRequestCycleListener activeRequestCycleListener) {
+        this.activeRequestCycleListener = activeRequestCycleListener;
+    }
 
-	void setActiveRequestCycleListener(IRequestCycleListener activeRequestCycleListener)
-	{
-		this.activeRequestCycleListener = activeRequestCycleListener;
-	}
+    IComponentOnBeforeRenderListener getActiveComponentOnBeforeRenderListener() {
+        return activeComponentOnBeforeRenderListener;
+    }
 
-	IComponentOnBeforeRenderListener getActiveComponentOnBeforeRenderListener()
-	{
-		return activeComponentOnBeforeRenderListener;
-	}
+    void setActiveComponentOnBeforeRenderListener(IComponentOnBeforeRenderListener activeComponentOnBeforeRenderListener) {
+        this.activeComponentOnBeforeRenderListener = activeComponentOnBeforeRenderListener;
+    }
 
-	void setActiveComponentOnBeforeRenderListener(IComponentOnBeforeRenderListener activeComponentOnBeforeRenderListener)
-	{
-		this.activeComponentOnBeforeRenderListener = activeComponentOnBeforeRenderListener;
-	}
+    public boolean isConfigured() {
+        return configured;
+    }
 
-	public boolean isConfigured()
-	{
-		return configured;
-	}
-
-	void setConfigured(boolean configured)
-	{
-		this.configured = configured;
-	}
+    void setConfigured(boolean configured) {
+        this.configured = configured;
+    }
 
 }
