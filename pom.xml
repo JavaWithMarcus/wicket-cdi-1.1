@@ -12,17 +12,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.javawithmarcus.wicket-cdi-1.1</groupId>
 	<artifactId>wicket-cdi-1.1</artifactId>
 	<version>0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Wicket CDI 1.1</name>
-	<description>Wicket CDI 1.1 Parent.</description>
+	<description>Wicket CDI 1.1 Integration Parent</description>
+	<url>http://javawithmarcus.github.io/wicket-cdi-1.1/</url>
+
 	<modules>
 		<module>wicket-cdi-1.1-core</module>
 		<module>wicket-cdi-1.1-weld</module>
-		<!--<module>wicket-cdi-1.1-owb</module> -->
 	</modules>
-	<groupId>com.github.javawithmarcus</groupId>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -38,6 +40,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -56,4 +59,26 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Marcus Kara</name>
+			<email>marcus@turabdin.nl</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>https://github.com/JavaWithMarcus/wicket-cdi-1.1.git</connection>
+		<url>https://github.com/JavaWithMarcus/wicket-cdi-1.1</url>
+	</scm>
+
 </project>
