@@ -225,7 +225,7 @@ public class CdiConfiguration {
      * simplifies the management of conversation lifecycle.
      * <p/>
      * ConversationManagement can also be enable per Conversation after configured. Once the CdiConfiguration is
-     * configured this call is passed to {@link ConversationManager#setManageConversation(java.lang.Boolean) } for the
+     * configured this call is passed to {@link ConversationManager#setManageConversation(boolean) } for the
      * ConversationManager in the current ConversationScope. This allows for ConversationManagement per active
      * Conversation.
      * <p/>
@@ -448,6 +448,7 @@ public class CdiConfiguration {
         if (!iter.hasNext()) {
             throw new IllegalStateException("CDI BeanManager cannot find CdiConfiguration");
         }
+        @SuppressWarnings("unchecked")
         Bean<CdiConfiguration> bean = (Bean<CdiConfiguration>) iter.next();
         CreationalContext<CdiConfiguration> ctx = beanManager.createCreationalContext(bean);
         return (CdiConfiguration) beanManager.getReference(bean, CdiConfiguration.class, ctx);
