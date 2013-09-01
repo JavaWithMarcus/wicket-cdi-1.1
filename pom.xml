@@ -87,9 +87,9 @@
 	</developers>
 
 	<scm>
-		<connection>https://github.com/JavaWithMarcus/wicket-cdi-1.1.git</connection>
-		<developerConnection>https://github.com/JavaWithMarcus/wicket-cdi-1.1.git</developerConnection>
 		<url>https://github.com/JavaWithMarcus/wicket-cdi-1.1</url>
+		<connection>https://github.com/JavaWithMarcus/wicket-cdi-1.1.git</connection>
+		<developerConnection>scm:git:git://github.com/JavaWithMarcus/wicket-cdi-1.1.git</developerConnection>
 	</scm>
 
 </project>
