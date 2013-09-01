@@ -17,7 +17,6 @@
 package com.github.javawithmarcus.wicket.cdi.weld;
 
 import java.util.Arrays;
-
 import org.apache.wicket.util.license.ApacheLicenseHeaderTestCase;
 
 /**
@@ -35,6 +34,7 @@ public class ApacheLicenceHeaderTest extends ApacheLicenseHeaderTestCase
 	{
 		xmlIgnore.add(".settings");
 		xmlIgnore.add("src/main/resources/META-INF/beans.xml");
+		xmlIgnore.add("src/main/resources/rebel.xml");
 		xmlPrologIgnore = Arrays.asList("src");
 	}
 }
