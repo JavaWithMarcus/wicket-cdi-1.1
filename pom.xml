@@ -20,6 +20,12 @@
 	<description>Wicket CDI 1.1 Integration Parent</description>
 	<url>http://javawithmarcus.github.io/wicket-cdi-1.1/</url>
 
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
 	<modules>
 		<module>wicket-cdi-1.1-core</module>
 		<module>wicket-cdi-1.1-weld</module>
@@ -82,6 +88,7 @@
 
 	<scm>
 		<connection>https://github.com/JavaWithMarcus/wicket-cdi-1.1.git</connection>
+		<developerConnection>https://github.com/JavaWithMarcus/wicket-cdi-1.1.git</developerConnection>
 		<url>https://github.com/JavaWithMarcus/wicket-cdi-1.1</url>
 	</scm>
 
